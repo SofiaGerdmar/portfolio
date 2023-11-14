@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+library.add(fab);
 
 const HeaderSection = styled.section`
 display: flex;
@@ -11,7 +16,6 @@ const IntroWrapper = styled.div`
 @media (min-width: 1024px) {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     background: #fff;
     width: 50vw;
     height: 100vh;
@@ -79,6 +83,23 @@ font-size: 1.3rem;
 line-height: 1.7rem;
 margin-bottom: 20px;
 `
+const SocialMedia = styled.div`
+display: flex;
+justify-content: center;
+gap: 2rem;
+text-align: center;
+`
+const IconLink = styled.a`
+font-size: 2rem;
+
+&:visited {
+  color: #1b2021;
+}
+&:hover {
+  color: #d0d0d0;
+}
+
+`
 export const Header = () => {
   return (
     <HeaderSection>
@@ -107,7 +128,29 @@ export const Header = () => {
         comfortable and valued.
         This makes me a valuable asset in everything from group projects to customer relations.
         </IntroText>
-
+        <SocialMedia>
+          <IconLink
+            title="Link to my LinkedIn"
+            href="https://www.linkedin.com/in/sofia-gerdmar/"
+            target="_blank"
+            rel="noreferrer">
+            <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
+          </IconLink>
+          <IconLink
+            title="Link to my GitHub"
+            href="https://github.com/SofiaGerdmar"
+            target="_blank"
+            rel="noreferrer">
+            <FontAwesomeIcon icon={['fab', 'github']} />
+          </IconLink>
+          <IconLink
+            title="Link to my StackOverflow"
+            href="https://stackoverflowteams.com/c/technigo/users/465/?tab=profile"
+            target="_blank"
+            rel="noreferrer">
+            <FontAwesomeIcon icon={['fab', 'stack-overflow']} />
+          </IconLink>
+        </SocialMedia>
       </IntroWrapper>
     </HeaderSection>
   )
