@@ -1,47 +1,125 @@
+/* eslint-disable react/jsx-closing-tag-location */
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import Lottie from 'react-lottie-player';
+import lottieJson from '../lotties/wave.json';
 
 library.add(fab);
 
 const HeaderSection = styled.section`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-margin: 0 10vw 0 10vw;
+width: 100vw;
+height: 100vh;
 `
-const IntroWrapper = styled.div`
-@media (min-width: 1024px) {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    width: 50vw;
-    height: 100vh;
-    margin: 20px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+const HeroSection = styled.div`
+height: 58vh;
 `
 const HeroWrapper = styled.div`
 display: none;
 
-@media (min-width: 1024px) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+@media (min-width: 768px) {
     background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
-    width: 50vw;
-    height: 100vh;
-    margin: 20px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    display: block;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 80%);
+    background-size: cover;
+    background-position: 75%;
+    margin-top: 0;
+    z-index: -1;
+}
+`
+const HeroWrapperShadow1 = styled.div`
+display: none;
+
+@media (min-width: 768px) {
+    background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
+    display: block;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 80%);
+    background-size: cover;
+    background-position: 75%;
+    margin-top: 0;
+    z-index: -1;
+    opacity: 50%;
+}
+`
+const HeroWrapperShadow2 = styled.div`
+display: none;
+
+@media (min-width: 768px) {
+    background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
+    display: block;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 80%);
+    background-size: cover;
+    background-position: 75%;
+    margin-top: 0;
+    z-index: -1;
+    opacity: 30%;
 }
 `
 const HeroImage = styled.img`
-max-width: 350px;
+display: none;
+
+@media (min-width: 768px) {
+    max-width: 300px;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 10vw;
+    z-index: 1;
+}
+`
+const HeroText = styled.div`
+display: none;
+
+@media (min-width: 768px) {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15vh;
+    right: 10vw;
+    z-index: 1;
+}
+`
+const HeroH1 = styled.h1`
 display: flex;
+font-family: 'Bellefair';
+font-weight: 500;
+color: #000c55;
+font-size: 3.2rem;
+margin-bottom: 20px;
+`
+const HeroH2 = styled.h2`
+display: flex;
+font-family: 'Bellefair';
+font-weight: 500;
+color: #000c55;
+font-size: 1.2rem;
+`
+const IntroSection = styled.div`
+@media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 100vw;
+    height: 50vh;
+    align-items: center;
+}
 `
 const ProfilePhoto = styled.img`
 width: 200px;
@@ -82,6 +160,8 @@ font-weight: 400;
 font-size: 1.3rem;
 line-height: 1.7rem;
 margin-bottom: 20px;
+display: flex;
+align-items: center;
 `
 const SocialMedia = styled.div`
 display: flex;
@@ -91,6 +171,7 @@ text-align: center;
 `
 const IconLink = styled.a`
 font-size: 2rem;
+color: #1b2021;
 
 &:visited {
   color: #1b2021;
@@ -98,15 +179,25 @@ font-size: 2rem;
 &:hover {
   color: #d0d0d0;
 }
-
+`
+const LottieContainer = styled.span`
+margin-left: 0.1rem;
+position: relative;
 `
 export const Header = () => {
   return (
     <HeaderSection>
-      <HeroWrapper>
+      <HeroSection>
+        <HeroWrapper />
+        <HeroText>
+          <HeroH1>!false</HeroH1>
+          <HeroH2>(It&apos;s funny because it&apos;s true.)</HeroH2>
+        </HeroText>
         <HeroImage src="/images/logo.png" alt="Logotype" />
-      </HeroWrapper>
-      <IntroWrapper>
+        <HeroWrapperShadow1 />
+        <HeroWrapperShadow2 />
+      </HeroSection>
+      <IntroSection>
         <IntroCard>
           <ProfilePhoto src="./images/portrait.png" alt="Portrait" />
           <IntroCardHeaders>
@@ -117,6 +208,13 @@ export const Header = () => {
         </IntroCard>
         <IntroText>
         Greetings fellow human! Thank you for stopping by!
+          <LottieContainer>
+            <Lottie
+              loop
+              animationData={lottieJson}
+              play
+              style={{ width: 34, height: 34 }} />
+          </LottieContainer>
         </IntroText>
         <IntroText>
         I have a background in creative writing and administration, and bring both creativity
@@ -151,7 +249,7 @@ export const Header = () => {
             <FontAwesomeIcon icon={['fab', 'stack-overflow']} />
           </IconLink>
         </SocialMedia>
-      </IntroWrapper>
+      </IntroSection>
     </HeaderSection>
   )
 }
