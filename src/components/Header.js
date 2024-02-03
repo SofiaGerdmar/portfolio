@@ -4,8 +4,6 @@ import styled from 'styled-components/macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import Lottie from 'react-lottie-player';
-import lottieJson from '../lotties/wave.json';
 
 library.add(fab);
 
@@ -14,61 +12,65 @@ width: 100vw;
 height: 100vh;
 `
 const HeroSection = styled.div`
-height: 58vh;
-`
-const HeroWrapper = styled.div`
-display: none;
+height: 20vh;
 
 @media (min-width: 768px) {
-    background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
-    display: block;
-    width: 100%;
-    height: 50vh;
-    overflow: hidden;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 80%);
-    background-size: cover;
-    background-position: 75%;
-    margin-top: 0;
-    z-index: -1;
+  height: 60vh;
+}
+`
+const HeroWrapper = styled.div`
+background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
+display: block;
+width: 100%;
+height: 20vh;
+overflow: hidden;
+position: relative;
+clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 80%);
+background-size: cover;
+background-position: 75%;
+margin-top: 0;
+z-index: -1;
+
+@media (min-width: 768px) {
+  height: 50vh;
 }
 `
 const HeroWrapperShadow1 = styled.div`
-display: none;
+background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
+display: block;
+width: 100%;
+height: 30vh;
+overflow: hidden;
+position: absolute;
+top: 0px;
+clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 80%);
+background-size: cover;
+background-position: 75%;
+margin-top: 0;
+z-index: -1;
+opacity: 50%;
 
 @media (min-width: 768px) {
-    background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
-    display: block;
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
-    position: absolute;
-    top: 0px;
-    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 80%);
-    background-size: cover;
-    background-position: 75%;
-    margin-top: 0;
-    z-index: -1;
-    opacity: 50%;
+  height: 60vh;
 }
 `
 const HeroWrapperShadow2 = styled.div`
-display: none;
+background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
+display: block;
+width: 100%;
+height: 40vh;
+overflow: hidden;
+position: absolute;
+top: 0px;
+clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 80%);
+background-size: cover;
+background-position: 75%;
+margin-top: 0;
+z-index: -1;
+opacity: 30%;
 
 @media (min-width: 768px) {
-    background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
-    display: block;
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
-    position: absolute;
-    top: 0px;
-    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 80%);
-    background-size: cover;
-    background-position: 75%;
-    margin-top: 0;
-    z-index: -1;
-    opacity: 30%;
+height: 70vh;
 }
 `
 const HeroImage = styled.img`
@@ -124,25 +126,26 @@ const IntroSection = styled.div`
 const ProfilePhoto = styled.img`
 width: 200px;
 height: 200px;
-margin: 40px 0 20px 0;
+margin: -90px 0 20px 0;
 `
 const IntroCard = styled.div`
 display: flex;
 flex-direction: column;
 font-family: Satoshi-Variable, sans-serif;
+align-items: center;
 `
 const IntroCardHeaders = styled.div`
 display: flex;
 flex-direction: column;
 margin-bottom: 20px;
 `
-const IntroH2 = styled.h2`
+const IntroH1 = styled.h1`
 color: #0077b6;
 font-weight: 700;
 font-size: 1.7rem;
 line-height: 2.3rem;
 `
-const IntroH1 = styled.h1`
+const IntroH2 = styled.h2`
 color: #1B2021;
 font-weight: 900;
 font-size: 1.8rem;
@@ -157,9 +160,9 @@ line-height: 2rem;
 const IntroText = styled.p`
 font-family: 'EB Garamond', serif;
 font-weight: 400;
-font-size: 1.3rem;
+font-size: 1.2rem;
 line-height: 1.7rem;
-margin-bottom: 20px;
+margin: 0 10px 20px 20px;
 display: flex;
 align-items: center;
 `
@@ -180,10 +183,6 @@ color: #1b2021;
   color: #d0d0d0;
 }
 `
-const LottieContainer = styled.span`
-margin-left: 0.1rem;
-position: relative;
-`
 export const Header = () => {
   return (
     <HeaderSection>
@@ -201,20 +200,13 @@ export const Header = () => {
         <IntroCard>
           <ProfilePhoto src="./images/portrait.png" alt="Portrait" />
           <IntroCardHeaders>
-            <IntroH2>Sofia Gerdmar</IntroH2>
-            <IntroH1>Frontend developer</IntroH1>
+            <IntroH1>Sofia Gerdmar</IntroH1>
+            <IntroH2>Frontend developer</IntroH2>
             <IntroH3>+ creative writer</IntroH3>
           </IntroCardHeaders>
         </IntroCard>
         <IntroText>
-        Greetings fellow human! Thank you for stopping by!
-          <LottieContainer>
-            <Lottie
-              loop
-              animationData={lottieJson}
-              play
-              style={{ width: 34, height: 34 }} />
-          </LottieContainer>
+        Welcome to my portfolio! Thank you for stopping by!
         </IntroText>
         <IntroText>
         I have a background in creative writing and administration, and bring both creativity
