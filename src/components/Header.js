@@ -10,35 +10,44 @@ library.add(fab);
 const HeaderSection = styled.section`
 width: 100vw;
 height: 100vh;
+max-width: 1024px;
 `
 const HeroSection = styled.div`
 height: 20vh;
 
 @media (min-width: 768px) {
   height: 60vh;
+  max-width: 1024px;
 }
 `
-const HeroWrapper = styled.div`
+const HeroWrapperShadow = styled.div`
 background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
 display: block;
-width: 100%;
+width: 100vw;
 height: 20vh;
 overflow: hidden;
-position: relative;
+position: absolute;
 clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 80%);
 background-size: cover;
 background-position: 75%;
 margin-top: 0;
 z-index: -1;
+max-width: 1024px;
 
 @media (min-width: 768px) {
   height: 50vh;
 }
 `
+const HeroWrapper = styled.div`
+display: flex;
+flex-direction: row-reverse;
+justify-content: space-around;
+width: 100%;
+`
 const HeroWrapperShadow1 = styled.div`
 background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
 display: block;
-width: 100%;
+width: 100vw;
 height: 30vh;
 overflow: hidden;
 position: absolute;
@@ -49,6 +58,7 @@ background-position: 75%;
 margin-top: 0;
 z-index: -1;
 opacity: 50%;
+max-width: 1024px;
 
 @media (min-width: 768px) {
   height: 60vh;
@@ -57,7 +67,7 @@ opacity: 50%;
 const HeroWrapperShadow2 = styled.div`
 background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
 display: block;
-width: 100%;
+width: 100vw;
 height: 40vh;
 overflow: hidden;
 position: absolute;
@@ -68,34 +78,32 @@ background-position: 75%;
 margin-top: 0;
 z-index: -1;
 opacity: 30%;
+max-width: 1024px;
 
 @media (min-width: 768px) {
-height: 70vh;
+  height: 70vh;
 }
 `
 const HeroImage = styled.img`
 display: none;
 
 @media (min-width: 768px) {
-    max-width: 300px;
-    display: flex;
-    position: absolute;
-    top: 0px;
-    left: 10vw;
-    z-index: 1;
+  max-width: 300px;
+  display: flex;
+  z-index: 1;
 }
 `
 const HeroText = styled.div`
 display: none;
 
 @media (min-width: 768px) {
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 15vh;
-    right: 10vw;
-    z-index: 1;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+  top: 15vh;
+  left: 10vw;
+  z-index: 1;
 }
 `
 const HeroH1 = styled.h1`
@@ -115,18 +123,31 @@ font-size: 1.2rem;
 `
 const IntroSection = styled.div`
 @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    width: 100vw;
-    height: 50vh;
-    align-items: center;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1024px;
+}
+
+@media (min-width: 1024px) {
+  display: flex;
+  background: #fff;
+  width: 100vw;
+  height: auto;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  max-width: 1024px;
 }
 `
 const ProfilePhoto = styled.img`
 width: 200px;
 height: 200px;
 margin: -90px 0 20px 0;
+
+@media (min-width: 768px) {
+  margin: -40px 0 20px 0;
+}
 `
 const IntroCard = styled.div`
 display: flex;
@@ -157,20 +178,42 @@ font-weight: 500;
 font-size: 1.4rem;
 line-height: 2rem;
 `
+const IntroTextContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+
+@media (min-width: 1024px) {
+  align-items: unset;
+}
+`
 const IntroText = styled.p`
 font-family: 'EB Garamond', serif;
 font-weight: 400;
 font-size: 1.2rem;
 line-height: 1.7rem;
 margin: 0 10px 20px 20px;
-display: flex;
-align-items: center;
+width: 300px;
+
+@media (min-width: 768px) {
+  font-size: 1.3rem;
+  text-align: justify;
+  width: 60vw;
+  word-spacing: -1px;
+}
+@media (min-width: 1024px) {
+  max-width: 600px;
+}
 `
 const SocialMedia = styled.div`
 display: flex;
 justify-content: center;
 gap: 2rem;
 text-align: center;
+
+@media (min-width: 768px) {
+  margin-top: 10px;
+}
 `
 const IconLink = styled.a`
 font-size: 2rem;
@@ -187,12 +230,14 @@ export const Header = () => {
   return (
     <HeaderSection>
       <HeroSection>
-        <HeroWrapper />
-        <HeroText>
-          <HeroH1>!false</HeroH1>
-          <HeroH2>(It&apos;s funny because it&apos;s true.)</HeroH2>
-        </HeroText>
-        <HeroImage src="/images/logo.png" alt="Logotype" />
+        <HeroWrapperShadow />
+        <HeroWrapper>
+          <HeroText>
+            <HeroH1>!false</HeroH1>
+            <HeroH2>(It&apos;s funny because it&apos;s true.)</HeroH2>
+          </HeroText>
+          <HeroImage src="/images/logo.png" alt="Logotype" />
+        </HeroWrapper>
         <HeroWrapperShadow1 />
         <HeroWrapperShadow2 />
       </HeroSection>
@@ -205,42 +250,44 @@ export const Header = () => {
             <IntroH3>+ creative writer</IntroH3>
           </IntroCardHeaders>
         </IntroCard>
-        <IntroText>
+        <IntroTextContainer>
+          <IntroText>
         Welcome to my portfolio! Thank you for stopping by!
-        </IntroText>
-        <IntroText>
+          </IntroText>
+          <IntroText>
         I have a background in creative writing and administration, and bring both creativity
         and attention to detail to any project I work on. I come alive when working with
         CSS/styled components and would love to branch out to UX/UI design in the future.
-        </IntroText>
-        <IntroText>
+          </IntroText>
+          <IntroText>
         Additionally, I am a people person and I love making everyone around me feel
         comfortable and valued.
         This makes me a valuable asset in everything from group projects to customer relations.
-        </IntroText>
-        <SocialMedia>
-          <IconLink
-            title="Link to my LinkedIn"
-            href="https://www.linkedin.com/in/sofia-gerdmar/"
-            target="_blank"
-            rel="noreferrer">
-            <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
-          </IconLink>
-          <IconLink
-            title="Link to my GitHub"
-            href="https://github.com/SofiaGerdmar"
-            target="_blank"
-            rel="noreferrer">
-            <FontAwesomeIcon icon={['fab', 'github']} />
-          </IconLink>
-          <IconLink
-            title="Link to my StackOverflow"
-            href="https://stackoverflowteams.com/c/technigo/users/465/?tab=profile"
-            target="_blank"
-            rel="noreferrer">
-            <FontAwesomeIcon icon={['fab', 'stack-overflow']} />
-          </IconLink>
-        </SocialMedia>
+          </IntroText>
+          <SocialMedia>
+            <IconLink
+              title="Link to my LinkedIn"
+              href="https://www.linkedin.com/in/sofia-gerdmar/"
+              target="_blank"
+              rel="noreferrer">
+              <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
+            </IconLink>
+            <IconLink
+              title="Link to my GitHub"
+              href="https://github.com/SofiaGerdmar"
+              target="_blank"
+              rel="noreferrer">
+              <FontAwesomeIcon icon={['fab', 'github']} />
+            </IconLink>
+            <IconLink
+              title="Link to my StackOverflow"
+              href="https://stackoverflowteams.com/c/technigo/users/465/?tab=profile"
+              target="_blank"
+              rel="noreferrer">
+              <FontAwesomeIcon icon={['fab', 'stack-overflow']} />
+            </IconLink>
+          </SocialMedia>
+        </IntroTextContainer>
       </IntroSection>
     </HeaderSection>
   )
