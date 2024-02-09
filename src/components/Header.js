@@ -9,8 +9,9 @@ library.add(fab);
 
 const HeaderSection = styled.section`
 width: 100vw;
-height: 100vh;
+height: auto;
 max-width: 1024px;
+margin-bottom: 30px;
 `
 const HeroSection = styled.div`
 height: 20vh;
@@ -152,7 +153,7 @@ margin: -90px 0 20px 0;
 const IntroCard = styled.div`
 display: flex;
 flex-direction: column;
-font-family: Satoshi-Variable, sans-serif;
+font-family: 'Satoshi-Variable', sans-serif;
 align-items: center;
 `
 const IntroCardHeaders = styled.div`
@@ -191,7 +192,7 @@ const IntroText = styled.p`
 font-family: 'EB Garamond', serif;
 font-weight: 400;
 font-size: 1.2rem;
-line-height: 1.7rem;
+line-height: 1.9rem;
 margin: 0 10px 20px 20px;
 width: 300px;
 
