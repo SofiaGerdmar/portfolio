@@ -43,9 +43,15 @@ line-height: 2rem;
 margin: 0 20px 100px 20px;
 text-align: center;
 `
-const TechSpan = styled.span`
+const TechSpanDark = styled.span`
 background-color: #000c55;
-color: rgba(199,225,239,1);
+color: white;
+padding: 0 5px 5px 5px;
+border-radius: 5px;
+`
+const TechSpanLight = styled.span`
+background-color: #0077b6;
+color: white;
 padding: 0 5px 5px 5px;
 border-radius: 5px;
 `
@@ -71,7 +77,7 @@ export const Tech = () => {
         <TechMain>
           <TechH1>Tech</TechH1>
           <TechP>
-        HTML, CSS, Flex, Grid, <TechSpan> JavaScript</TechSpan>, ES6, JSX, <TechSpan>React</TechSpan>, Redux, web accessibility, API:s, pair-programming, React Hooks, GitHub, <TechSpan>mob-programming</TechSpan>.
+        HTML, CSS, Flex, Grid, <TechSpanLight> JavaScript</TechSpanLight>, ES6, JSX, <TechSpanDark>React</TechSpanDark>, Redux, web accessibility, API:s, pair-programming, React Hooks, GitHub, <TechSpanLight>mob-programming</TechSpanLight>.
           </TechP>
         </TechMain>
       </TechSection>

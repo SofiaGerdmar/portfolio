@@ -1,7 +1,0 @@
-<svg id="visual" viewBox="0 0 2560 1000" width="2560" height="1000"><defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color: hsla(129, 53%, 90%, 1)" />
-      <stop offset="100%" style="stop-color: hsla(0, 0%, 100%, 1)" />
-    </linearGradient>
-  </defs>
-  <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient)" /><path d="M0 597L53.3 587.7C106.7 578.3 213.3 559.7 320 521.2C426.7 482.7 533.3 424.3 640 437.8C746.7 451.3 853.3 536.7 960 548.8C1066.7 561 1173.3 500 1280 466.3C1386.7 432.7 1493.3 426.3 1600 446.5C1706.7 466.7 1813.3 513.3 1920 509C2026.7 504.7 2133.3 449.3 2240 442C2346.7 434.7 2453.3 475.3 2506.7 495.7L2560 516L2560 0L2506.7 0C2453.3 0 2346.7 0 2240 0C2133.3 0 2026.7 0 1920 0C1813.3 0 1706.7 0 1600 0C1493.3 0 1386.7 0 1280 0C1173.3 0 1066.7 0 960 0C853.3 0 746.7 0 640 0C533.3 0 426.7 0 320 0C213.3 0 106.7 0 53.3 0L0 0Z" fill="#D8F3DC" stroke-linecap="round" stroke-linejoin="miter" style="transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0s;"></path></svg>

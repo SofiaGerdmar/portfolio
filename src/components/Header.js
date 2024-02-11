@@ -11,13 +11,13 @@ const HeaderSection = styled.section`
 width: 100vw;
 height: auto;
 max-width: 1024px;
-margin-bottom: 30px;
+margin-bottom: 50px;
 `
 const HeroSection = styled.div`
 height: 20vh;
 
 @media (min-width: 768px) {
-  height: 60vh;
+  height: 50vh;
   max-width: 1024px;
 }
 `
@@ -36,7 +36,7 @@ z-index: -1;
 max-width: 1024px;
 
 @media (min-width: 768px) {
-  height: 50vh;
+  height: 30vh;
 }
 `
 const HeroWrapper = styled.div`
@@ -62,7 +62,7 @@ opacity: 50%;
 max-width: 1024px;
 
 @media (min-width: 768px) {
-  height: 60vh;
+  height: 40vh;
 }
 `
 const HeroWrapperShadow2 = styled.div`
@@ -82,7 +82,7 @@ opacity: 30%;
 max-width: 1024px;
 
 @media (min-width: 768px) {
-  height: 70vh;
+  height: 50vh;
 }
 `
 const HeroImage = styled.img`
@@ -98,13 +98,13 @@ const HeroText = styled.div`
 display: none;
 
 @media (min-width: 768px) {
-  width: 350px;
   display: flex;
   flex-direction: column;
-  position: relative; 
+  /* position: relative; 
   top: 15vh;
-  left: 10vw;
+  left: 10vw; */
   z-index: 1;
+  justify-content: center;
 }
 `
 const HeroH1 = styled.h1`
@@ -128,6 +128,7 @@ const IntroSection = styled.div`
   align-items: flex-start;
   width: 100%;
   max-width: 1024px;
+  justify-content: space-around;
 }
 
 @media (min-width: 1024px) {
@@ -136,7 +137,6 @@ const IntroSection = styled.div`
   width: 100vw;
   height: auto;
   align-items: center;
-  justify-content: space-around;
   margin-top: 20px;
   max-width: 1024px;
 }
@@ -155,6 +155,10 @@ display: flex;
 flex-direction: column;
 font-family: 'Satoshi-Variable', sans-serif;
 align-items: center;
+
+@media (min-width: 768px) {
+  margin: 20px 0 0 20px;
+}
 `
 const IntroCardHeaders = styled.div`
 display: flex;
@@ -170,7 +174,7 @@ line-height: 2.3rem;
 const IntroH2 = styled.h2`
 color: #1B2021;
 font-weight: 900;
-font-size: 1.8rem;
+font-size: 1.7rem;
 line-height: 2.3rem;
 `
 const IntroH3 = styled.h3`
@@ -198,9 +202,7 @@ width: 300px;
 
 @media (min-width: 768px) {
   font-size: 1.3rem;
-  text-align: justify;
-  width: 60vw;
-  word-spacing: -1px;
+  width: 50vw;
 }
 @media (min-width: 1024px) {
   max-width: 600px;
