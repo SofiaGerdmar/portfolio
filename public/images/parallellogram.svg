@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="300"
+   width="500"
+   version="1.1"
+   id="svg446"
+   sodipodi:docname="parallellogram.svg"
+   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs450">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1329">
+      <stop
+         style="stop-color:#0077b6;stop-opacity:1;"
+         offset="0"
+         id="stop1325" />
+      <stop
+         style="stop-color:#c7e1ef;stop-opacity:0.01;"
+         offset="1"
+         id="stop1327" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1329"
+       id="linearGradient23948"
+       x1="0"
+       y1="50"
+       x2="100"
+       y2="50"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview448"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.492"
+     inkscape:cx="176.16372"
+     inkscape:cy="164.1252"
+     inkscape:window-width="2560"
+     inkscape:window-height="1314"
+     inkscape:window-x="2560"
+     inkscape:window-y="197"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg446" />
+  <polygon
+     points="0,45 100,20 100,55 0,80 "
+     style="fill:url(#linearGradient23948);fill-opacity:1;stroke:none"
+     id="polygon444"
+     transform="matrix(4.6195827,0,0,6.8237024,-0.40128368,-182.23649)" />
+</svg>

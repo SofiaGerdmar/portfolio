@@ -4,7 +4,7 @@ import styled from 'styled-components/macro';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'pagination.css';
 
 const FeaturedSection = styled.section`
 width: 100vw;
@@ -14,7 +14,6 @@ margin-top: 100px;
 display: flex;
 flex-direction: column;
 align-items: center;
-color: #1B2021;
 `
 const FeaturedH1 = styled.h1`
 font-family: 'Satoshi-Variable', sans-serif;
@@ -45,7 +44,7 @@ export const FeaturedProjects = () => {
       <FeaturedH1>Featured projects</FeaturedH1>
       <Swiper pagination={{ dynamicBullets: true }} modules={[Pagination]} className="swiper">
         <SwiperSlide>
-          <FeaturedImg src="/images/finalproject.png" alt="image of screen shot final project" />
+          <FeaturedImg src="/images/finalproject.png" alt="screen shot final project" />
           <FeaturedH2>Final project</FeaturedH2>
           <FeaturedP>A React Router project featuring the UNESCO World Heritage Sites in Italy. A data set from Kaggle was used and consequently modified in MongoDB Atlas.</FeaturedP>
         </SwiperSlide>
