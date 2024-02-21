@@ -11,7 +11,7 @@ const HeaderSection = styled.section`
 width: 100vw;
 height: auto;
 max-width: 1024px;
-margin-bottom: 50px;
+margin-bottom: 100px;
 `
 const HeroSection = styled.div`
 height: 20vh;
@@ -172,7 +172,7 @@ font-size: 1.7rem;
 line-height: 2.3rem;
 `
 const IntroH2 = styled.h2`
-color: #1B2021;
+color: #000c55;
 font-weight: 900;
 font-size: 1.7rem;
 line-height: 2.3rem;
