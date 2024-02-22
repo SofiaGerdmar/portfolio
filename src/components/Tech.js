@@ -10,7 +10,7 @@ max-height: 600px;
 display: flex;
 align-items: center;
 justify-content: center;
-clip-path: polygon(0 15%, 100% 0%, 100% 75%, 0 90%);
+clip-path: polygon(0 5%, 100% 0%, 100% 85%, 0 90%);
 background-image: linear-gradient( 179deg,  rgba(0,119,182,0.3) 13.6%, rgba(199,225,239,0.3) 88.1% );
 `
 const TechMain = styled.div`

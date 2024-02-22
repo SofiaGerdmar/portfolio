@@ -1,5 +1,6 @@
 import { FeaturedProjects } from 'components/FeaturedProjects';
 import { Header } from 'components/Header';
+import { Skills } from 'components/Skills';
 import { Tech } from 'components/Tech';
 import React from 'react';
 import styled from 'styled-components/macro';
@@ -14,6 +15,7 @@ export const App = () => {
       <Header />
       <Tech />
       <FeaturedProjects />
+      <Skills />
     </AppDiv>
   )
 }
