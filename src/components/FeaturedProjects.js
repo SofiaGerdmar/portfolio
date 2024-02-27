@@ -49,6 +49,7 @@ font-family: 'Satoshi-Variable', sans-serif;
 font-weight: 900;
 font-size: 2rem;
 margin: 0 20px;
+color: #565656;
 `
 const FeaturedP = styled.p`
 font-family: 'EB Garamond', serif;
