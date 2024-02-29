@@ -1,10 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components/macro';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Pagination } from 'swiper/modules';
-// import 'swiper/css';
-// import 'pagination.css';
 
 const FeaturedSection = styled.section`
 width: 100vw;

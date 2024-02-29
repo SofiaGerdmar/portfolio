@@ -10,7 +10,6 @@ const FooterSection = styled.section`
 width: 100vw;
 height: auto;
 max-width: 1024px;
-margin-bottom: 100px;
 display: flex;
 flex-direction: column;
 `
@@ -118,11 +117,10 @@ display: flex;
 justify-content: center;
 gap: 2rem;
 text-align: center;
-margin-bottom: 120px;
 
 @media (min-width: 768px) {
   margin-top: 10px;
-  margin-bottom: 160px;
+  margin-bottom: 20px;
 }
 `
 const IconLink = styled.a`
@@ -170,9 +168,9 @@ flex-direction: row;
 justify-content: space-around;
 width: 100%;
 transform: rotate(180deg);
-margin-top: 100px;
 position: relative;
 bottom: 0px;
+height: 40vh;
 `
 const FooterShadowBottom = styled.div`
 background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );

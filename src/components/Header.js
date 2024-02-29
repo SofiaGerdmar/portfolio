@@ -100,9 +100,6 @@ display: none;
 @media (min-width: 768px) {
   display: flex;
   flex-direction: column;
-  /* position: relative; 
-  top: 15vh;
-  left: 10vw; */
   z-index: 1;
   justify-content: center;
 }
