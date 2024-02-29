@@ -144,7 +144,7 @@ const IntroSection = styled.div`
 const ProfilePhoto = styled.img`
 width: 200px;
 height: 200px;
-margin: -90px 0 20px 0;
+margin: -50px 0 20px 0;
 
 @media (min-width: 768px) {
   margin: -40px 0 20px 0;

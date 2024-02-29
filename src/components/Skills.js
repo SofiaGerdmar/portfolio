@@ -13,6 +13,7 @@ margin: 50px 0 50px 0;
 
 @media (min-width: 768px) {
     height: auto;
+    margin-top: 70px;
 }
 `
 const SkillsWrapper = styled.div`
@@ -32,10 +33,6 @@ background-position: 75%;
 margin-top: 0;
 z-index: -1;
 max-width: 1024px;
-
-@media (min-width: 768px) {
-  height: 20vh;
-}
 `
 const SkillsShadow2 = styled.div`
 background-image: linear-gradient( 179deg,  rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
@@ -51,10 +48,6 @@ margin-top: 0;
 z-index: -1;
 opacity: 50%;
 max-width: 1024px;
-
-@media (min-width: 768px) {
-  height: 30vh;
-}
 `
 const SkillsShadow3 = styled.div`
 background-image: linear-gradient( 179deg, rgba(255,252,243,1) 13.6%, rgba(254,244,232,1) 88.1% );
@@ -70,10 +63,6 @@ margin-top: 0;
 z-index: -1;
 opacity: 30%;
 max-width: 1024px;
-
-@media (min-width: 768px) {
-  height: 40vh;
-}
 `
 const SkillsH1 = styled.h1`
 font-family: 'Satoshi-Variable', sans-serif;
@@ -146,6 +135,7 @@ const SkillsListSection = styled.section`
     display: flex;
     width: 90vw;
     justify-content: space-evenly;
+    max-width: 1024px;
 }
 `
 const SkillsListDiv = styled.div`
