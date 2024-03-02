@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesUp } from '@fortawesome/free-solid-svg-icons';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components/macro';
 
 const MoveBtnAnimation = keyframes`
   0% {
@@ -24,6 +24,7 @@ const MoveBtnAnimation = keyframes`
 const ScrollToTopContainer = styled.div`
   position: relative;
   max-width: 1024px;
+  width: 100vw;
 `;
 
 const IconPosition = styled.div`
@@ -36,8 +37,7 @@ const IconPosition = styled.div`
   @media (max-width: 768px) {
     bottom: 5%;
     right: 50%;
-    transform: translate(-50% -50%);
-
+    transform: translate(50%, 50%);
   }
 `;
 

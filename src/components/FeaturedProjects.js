@@ -14,12 +14,22 @@ align-items: center;
 const FeaturedContainer = styled.div`
 display: flex;
 flex-direction: column;
+width: 100vw;
+max-width: 1024px;
+height: auto;
+justify-content: center;
+align-items: center;
 `
 const FeaturedBox = styled.div`
 margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 320px;
 
 @media (min-width: 768px) {
-  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 `
 const FeaturedText = styled.div`
